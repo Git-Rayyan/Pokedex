@@ -1,5 +1,5 @@
 export const first151Pokemon = [
-    "Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wartortle", "Blastoise",
+    "bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "Squirtle", "Wartortle", "Blastoise",
     "Caterpie", "Metapod", "Butterfree", "Weedle", "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot",
     "Rattata", "Raticate", "Spearow", "Fearow", "Ekans", "Arbok", "Pikachu", "Raichu", "Sandshrew", "Sandslash",
     "Nidoran♀", "Nidorina", "Nidoqueen", "Nidoran♂", "Nidorino", "Nidoking", "Clefairy", "Clefable", "Vulpix",
@@ -98,6 +98,6 @@ export function getPokedexNumber(index) {
     return index + 1
 }
 
-export function getFullPokedexNumber(index) {
-    return `${index + 1 > 99 ? index + 1 : index + 1 > 9 ? `0${index + 1}` : `00${index + 1}`}`
-}
+export const getFullPokedexNumber = (num) => {
+    return String(num + 1).padStart(3, '0');
+};
